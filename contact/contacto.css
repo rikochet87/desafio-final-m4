@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.contacto {
+  background-color: #141414;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 660px;
+}
+
+.contacto__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 48px;
+}
+
+.contacto__label,
+.contacto__submit-button {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 13px;
+}
+
+.contacto__input {
+  height: 40px;
+  font-size: 13px;
+}
+
+.contacto__input-mensaje {
+  height: 113px;
+  font-size: 13px;
+}
+
+.contacto__input,
+.contacto__submit-button,
+.contacto__input-mensaje {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.contacto__submit-button {
+  background-color: #2c2c2c;
+  color: white;
+  margin-top: 60px;
+  height: 45px;
+}
+
+.contacto__form {
+  min-width: 300px;
+}
+
+@media (min-width: 960px) {
+  .contacto {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .contacto__title {
+    margin-right: 80px;
+    margin-bottom: 30%;
+  }
+}
