@@ -3,7 +3,7 @@ function contactComponent(el) {
 
   componentEl.innerHTML = `
   <section class="contacto">
-    <h2 class="contacto__title">Escribime</h2>
+    <h2 class="contacto__title">Contacto</h2>
     <form class="contacto__form">
       <label>
         <h3 class="contacto__label">Nombre</h3>   
