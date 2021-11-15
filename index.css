@@ -11,11 +11,83 @@
   width: 100%;
   height: 150px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 .header__logo {
   width: 75px;
   height: 75px;
+}
+
+.header__desk-menu {
+  display: none;
+  height: 36px;
+  width: 451px;
+}
+
+.header__desk-nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__desk-link {
+  font-size: 24px;
+  font-family: "Poppins";
+  text-decoration: none;
+  color: black;
+}
+
+@media (min-width: 750px) {
+  .header__desk-menu {
+    display: inherit;
+  }
+}
+
+.header__burger {
+  width: 36px;
+  height: 42px;
+}
+
+.header__burger-button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  column-gap: 7px;
+}
+
+.header__burger-button-bar {
+  width: 100%;
+  height: 6px;
+  background-color: black;
+}
+
+.window {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border: solid 1px white;
+  background-color: #161616;
+  opacity: 0.9;
+  display: none;
+}
+
+.window__cont-close-button {
+  text-align: right;
+}
+
+.window__close-button {
+  background-color: #161616;
+  color: white;
+  font-size: 60px;
+  border: none;
 }
