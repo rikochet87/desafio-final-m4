@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .header-welcome {
@@ -13,6 +15,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 25px;
+  padding: 0 25px;
 }
 
 .header__logo {
@@ -49,6 +53,7 @@
 .header__burger {
   width: 36px;
   height: 42px;
+  display: none;
 }
 
 .header__burger-button {
@@ -69,6 +74,12 @@
   background-color: black;
 }
 
+@media (max-width: 750px) {
+  .header__burger {
+    display: inherit;
+  }
+}
+
 .window {
   top: 0;
   bottom: 0;
@@ -79,6 +90,8 @@
   background-color: #161616;
   opacity: 0.9;
   display: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .window__cont-close-button {
@@ -90,4 +103,40 @@
   color: white;
   font-size: 60px;
   border: none;
+}
+
+.window__menu_vert {
+  width: 100%;
+  height: 616px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.window__item-link {
+  font-family: "Montserrat";
+  font-size: 48px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.welcome,
+.welcome__cont-text {
+  width: 100%;
+  height: 466px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome__text-one {
+  font-family: "Montserrat";
+  font-size: 48px;
+}
+
+.welcome__text-two {
+  font-family: "Montserrat";
+  font-size: 32px;
 }
