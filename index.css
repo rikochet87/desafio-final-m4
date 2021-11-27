@@ -1,7 +1,12 @@
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+.header-welcome-section {
+  width: 100%;
+  height: 616px;
 }
 
 .welcome,
@@ -71,6 +76,8 @@
 .services__container {
   height: 75%;
   width: 100%;
+  display: grid;
+  gap: 40px;
 }
 
 .services__container,
