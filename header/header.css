@@ -1,3 +1,10 @@
+.header__container {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  z-index: 1;
+}
+
 .header {
   width: 100%;
   height: 150px;
@@ -30,7 +37,7 @@
   font-size: 24px;
   font-family: "Poppins";
   text-decoration: none;
-  color: black;
+  color: azure;
 }
 
 @media (min-width: 750px) {
@@ -55,12 +62,13 @@
   flex-direction: column;
   justify-content: space-around;
   column-gap: 7px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .header__burger-button-bar {
   width: 100%;
   height: 6px;
-  background-color: black;
+  background-color: azure;
   border-radius: 5px;
 }
 
@@ -71,6 +79,8 @@
 }
 
 .window {
+  width: 100%;
+  height: 616px;
   top: 0;
   bottom: 0;
   left: 0;

@@ -9,24 +9,39 @@
   height: 616px;
 }
 
+.welcome__container {
+  width: 100%;
+  height: 616px;
+}
+
 .welcome,
 .welcome__cont-text {
   width: 100%;
-  height: 466px;
+  height: 616px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: absolute;
+}
+
+.welcome__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .welcome__text-one {
   font-family: "Montserrat";
   font-size: 48px;
+  color: azure;
+  margin-top: 100px;
 }
 
 .welcome__text-two {
   font-family: "Montserrat";
   font-size: 32px;
+  color: azure;
 }
 
 .about-me-section,
@@ -37,10 +52,9 @@
 
 .about-me {
   background-color: #141414;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
-  justify-content: space-around;
+  text-align: center;
   padding: 0 32px;
 }
 
@@ -96,7 +110,9 @@
 .services__img {
   width: 370px;
   height: 250px;
+  border-radius: 10px;
 }
+
 .services__item,
 .services__text {
   font-family: "Poppins";
@@ -111,7 +127,7 @@
   width: 85%;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 960px) {
   .services__container {
     display: flex;
     flex-direction: row;

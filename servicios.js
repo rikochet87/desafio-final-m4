@@ -21,19 +21,24 @@ function getServices() {
     .then((data) => {
       console.log(data);
       const fieldsCollection = data.items.map((item) => {
+        const imagen = buscarEnAsset(item.fields.imagen.sys.id, data);
         return {
           title: item.fields.titulo,
           description: item.fields.descripcion,
-        };
-      });
-      const assetCollection = data.includes.map((item) => {
-        return {
-          image: item.fields.file,
+          image: imagen.fields.file.url,
         };
       });
 
-      return fieldsCollection, assetCollection;
+      return fieldsCollection;
     });
+
+  function buscarEnAsset(id, data) {
+    console.log(id, data.includes.Asset);
+    const arrayEncontrado = data.includes.Asset.find((asset) => {
+      return asset.sys.id == id;
+    });
+    return arrayEncontrado;
+  }
 }
 
 function main() {
