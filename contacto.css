@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header__container {
+  background-color: #000000;
+}
+
+.header__desk-link {
+  color: azure;
+}
+
+.header__burger-button {
+  background-color: #000000;
+}
+
+.header__burger-button-bar {
+  background-color: azure;
+}
+
+.contacto {
+  background-color: #000000;
+}
+
+.contacto__title {
+  padding-top: 150px;
+}
+
+.contacto__form {
+  padding-top: 50px;
+}
+
+.services-section {
+  display: none;
+}

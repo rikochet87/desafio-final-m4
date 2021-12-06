@@ -20,9 +20,9 @@
   background-color: azure;
 }
 
-.services-section {
+.portfolio-section {
   width: 100%;
-  height: 1500px;
+  height: 2000px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-.services__title {
+.portfolio__title {
   font-family: "Montserrat";
   font-size: 40px;
   text-align: center;
@@ -39,16 +39,15 @@
   top: 200px;
 }
 
-.services__container {
+.portfolio__container {
   height: 75%;
   width: 100%;
   display: grid;
   gap: 40px;
-  margin-top: 200px;
 }
 
-.services__container,
-.services__card {
+.portfolio__container,
+.portfolio__card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,38 +55,38 @@
   text-align: center;
 }
 
-.services__card {
+.portfolio__card {
   width: 370px;
 }
 
-.services__img {
+.portfolio__img {
   width: 370px;
   height: 250px;
   border-radius: 10px;
 }
 
-.services__item,
-.services__text {
+.portfolio__item,
+.portfolio__text {
   font-family: "Poppins";
   color: azure;
 }
 
-.services__item {
+.portfolio__item {
   font-size: 24px;
 }
 
-.services__text {
+.portfolio__text {
   font-size: 16px;
   width: 85%;
 }
 
 @media (min-width: 960px) {
-  .services__container {
+  .portfolio__container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .services-section {
+  .portfolio-section {
     height: 1200px;
   }
 }

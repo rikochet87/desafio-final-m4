@@ -2,9 +2,8 @@ function addPortfolioCard(params = {}) {
   const template = document.querySelector("#portfolio-template");
   const container = document.querySelector(".portfolio__container");
 
-  template.content.querySelector(".portfolio__title").textContent =
-    params.title;
-  template.content.querySelector(".portfolio__description").textContent =
+  template.content.querySelector(".portfolio__item").textContent = params.title;
+  template.content.querySelector(".portfolio__text").textContent =
     params.description;
   template.content.querySelector(".portfolio__img").src =
     "http:" + params.image;
@@ -44,7 +43,7 @@ function getPortfolio() {
 }
 
 function main() {
-  portfolio().then(function (services) {
+  getPortfolio().then(function (services) {
     for (const s of services) {
       addPortfolioCard(s);
     }
