@@ -90,7 +90,7 @@
   background-color: #161616;
   opacity: 0.9;
   display: none;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
 }
 
