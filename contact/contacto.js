@@ -24,43 +24,26 @@ function contactComponent(el) {
    </section>
    `;
 
-  // const form = componentEl.querySelector(".contacto__form");
-  // form.addEventListener("submit", function (e) {
-  //   e.preventDefault();
-
-  //   console.log("el form se envio");
-  // });
-
   el.appendChild(componentEl);
+  sendForm();
 }
 
 function sendForm() {
-  const formEl = document.querySelector(".contacto__form");
-
-  formEl.addEventListener("submit", (evento) => {
-    evento.preventDefault();
-
-    const formData = new FormData(evento.target);
-    const datosObj = Object.fromEntries(formData.entries());
+  var form = document.querySelector(".contacto");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert(`Datos enviados! Muchas gracias.`);
+    formData = new FormData(event.target);
+    data = Object.fromEntries(formData.entries());
+    form.reset();
+    delete data.name;
 
     fetch("https://apx-api.vercel.app/api/utils/dwf", {
       method: "POST",
       headers: { "content-type": "application/json" },
-
-      body: JSON.stringify({
-        to: "matias3282@hotmail.com",
-        message: `
-        Nombre: ${datosObj.nombre} <br> <br>
-        Email: ${datosObj.email} <br> <br>
-        Mensaje: ${datosObj.mensaje}
-        `,
-      }),
-    });
-    formEl.reset();
-    alert(
-      "Mensaje enviado correctamente, Gracias " +
-        datosObj.nombre +
-        " por comunicarte."
-    );
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.text())
+      .then((res) => console.log(res));
   });
 }

@@ -135,6 +135,6 @@
   }
   .services-section {
     width: 100%;
-    height: 538px;
+    height: fit-content;
   }
 }
